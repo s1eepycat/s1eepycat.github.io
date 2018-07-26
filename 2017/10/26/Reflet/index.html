@@ -6,21 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>The Reflect(反射) | 猪猪猪头1.20</title>
+  <title>The Reflect(反射) | 猪猪猪头1.21</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="JAVA反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意方法和属性；这种动态获取信息以及动态调用对象方法的功能称为java语言的反射机制参考：Reflect 反射机制的应用生成动态代理,面向切片编程(在调用方法的前后各加栈帧) 理解反射首先明确的概念: 一切皆对象—-类也是对象.然后知道类中的内容 :modifier(修饰符)  con">
 <meta property="og:type" content="article">
 <meta property="og:title" content="The Reflect(反射)">
 <meta property="og:url" content="http://yoursite.com/2017/10/26/Reflet/index.html">
-<meta property="og:site_name" content="猪猪猪头1.20">
+<meta property="og:site_name" content="猪猪猪头1.21">
 <meta property="og:description" content="JAVA反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意方法和属性；这种动态获取信息以及动态调用对象方法的功能称为java语言的反射机制参考：Reflect 反射机制的应用生成动态代理,面向切片编程(在调用方法的前后各加栈帧) 理解反射首先明确的概念: 一切皆对象—-类也是对象.然后知道类中的内容 :modifier(修饰符)  con">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-26T11:36:04.360Z">
+<meta property="og:updated_time" content="2018-07-26T11:55:38.978Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="The Reflect(反射)">
 <meta name="twitter:description" content="JAVA反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意方法和属性；这种动态获取信息以及动态调用对象方法的功能称为java语言的反射机制参考：Reflect 反射机制的应用生成动态代理,面向切片编程(在调用方法的前后各加栈帧) 理解反射首先明确的概念: 一切皆对象—-类也是对象.然后知道类中的内容 :modifier(修饰符)  con">
   
-    <link rel="alternative" href="/atom.xml" title="猪猪猪头1.20" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="猪猪猪头1.21" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -177,11 +177,21 @@
         <p>JAVA反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意方法和属性；这种动态获取信息以及动态调用对象方法的功能称为java语言的反射机制<br>参考：<a href="https://baike.baidu.com/item/JAVA%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6/6015990?fr=aladdin" target="_blank" rel="noopener">Reflect</a><br><br></p>
 <h3 id="反射机制的应用"><a href="#反射机制的应用" class="headerlink" title="反射机制的应用"></a>反射机制的应用</h3><p>生成动态代理,面向切片编程(在调用方法的前后各加栈帧)</p>
 <h3 id="理解反射"><a href="#理解反射" class="headerlink" title="理解反射"></a>理解反射</h3><p>首先明确的概念: 一切皆对象—-类也是对象.<br>然后知道类中的内容 :modifier(修饰符)  constructor(构造方法)  field(属性)  method(方法)</p>
-<p>###获取类对象<br>1、.getClass获取<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Person ps = new Person();</span><br><span class="line">Class&lt;?&gt; c1 = ps.getClass();</span><br></pre></td></tr></table></figure></p>
+<h3 id="获取类对象"><a href="#获取类对象" class="headerlink" title="获取类对象"></a>获取类对象</h3><p>1、.getClass获取<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Person ps = new Person();</span><br><span class="line">Class&lt;?&gt; c1 = ps.getClass();</span><br></pre></td></tr></table></figure></p>
 <p>2、.Class获取<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Class&lt;?&gt; c2 = Person.class;</span><br></pre></td></tr></table></figure></p>
 <p>3、.Class类的静态方法forName(字符串的类名)包名.类名<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Class&lt;?&gt; c3 = Class.forName(<span class="string">"reflect.Person"</span>);</span><br></pre></td></tr></table></figure></p>
 <p>4、任意类名.class.getClassLoader().loadClass(URL);<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Class&lt;?&gt; c5 = TestPerson.class.getClassLoader().loadClass(<span class="string">"fanshe.Person"</span>);</span><br></pre></td></tr></table></figure></p>
-<p>###获取类对象的属性<br>所有属性(包括私有属性)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Field [] allFields = c2.getDeclaredFields();</span><br></pre></td></tr></table></figure></p>
+<h3 id="获取类对象的属性"><a href="#获取类对象的属性" class="headerlink" title="获取类对象的属性"></a>获取类对象的属性</h3><p>所有属性(包括私有属性)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Field[] allFields = c2.getDeclaredFields();</span><br></pre></td></tr></table></figure></p>
+<p>获得指定的属性<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Field f1 = c2.getField(<span class="string">"age"</span>);</span><br></pre></td></tr></table></figure></p>
+<p>获得指定的私有属性<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Field f2 = c2.getDeclaredField(<span class="string">"name"</span>);</span><br></pre></td></tr></table></figure></p>
+<p>获得类的public类型的属性<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Field[] fields = c2.getFields();</span><br></pre></td></tr></table></figure></p>
+<h3 id="获取类对象的方法"><a href="#获取类对象的方法" class="headerlink" title="获取类对象的方法"></a>获取类对象的方法</h3><p>获得类的所有方法<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Method[] allMethods = c2.getDeclaredMethods();</span><br></pre></td></tr></table></figure></p>
+<p>获取构造方法<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Constructor[] constructors = c2.getConstructors();</span><br></pre></td></tr></table></figure></p>
+<p>获得类的public类型的方法<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Method [] methods = c2.getMethods();</span><br></pre></td></tr></table></figure></p>
+<h3 id="获取类的完整名称"><a href="#获取类的完整名称" class="headerlink" title="获取类的完整名称"></a>获取类的完整名称</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String className = c2.getName();</span><br></pre></td></tr></table></figure>
+<h3 id="获取类的完整名称-1"><a href="#获取类的完整名称-1" class="headerlink" title="获取类的完整名称"></a>获取类的完整名称</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Class superclass = c2.getSuperclass();</span><br></pre></td></tr></table></figure>
+<p><br></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>灵活使用反射能让我们代码更加灵活，这里比如JDBC原生代码注册驱动，hibernate 的实体类，Spring 的 AOP等等都有反射的实现。但是凡事都有两面性，反射也会消耗系统的性能，增加复杂性等，大部分时候我们要合理使用。</p>
 
       
 
