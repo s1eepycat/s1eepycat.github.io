@@ -6,23 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>SSM(Spring+SpringMVC+Mybatis) | 猪猪猪头1.32</title>
+  <title>SSM(Spring+SpringMVC+Mybatis) | 猪猪猪头1.33</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="SSM框架是spring MVC ，spring和mybatis框架的整合，是标准的MVC模式，将整个系统划分为表现层，controller层，service层，DAO层四层使用spring MVC负责请求的转发和视图管理spring实现业务对象管理，mybatis作为数据对象的持久化引擎 Spring我们平时开发接触最多的估计就是IOC容器，它可以装载bean（也就是我们Java中的类，当然也包">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SSM(Spring+SpringMVC+Mybatis)">
 <meta property="og:url" content="http://yoursite.com/2017/12/22/SSM框架/index.html">
-<meta property="og:site_name" content="猪猪猪头1.32">
+<meta property="og:site_name" content="猪猪猪头1.33">
 <meta property="og:description" content="SSM框架是spring MVC ，spring和mybatis框架的整合，是标准的MVC模式，将整个系统划分为表现层，controller层，service层，DAO层四层使用spring MVC负责请求的转发和视图管理spring实现业务对象管理，mybatis作为数据对象的持久化引擎 Spring我们平时开发接触最多的估计就是IOC容器，它可以装载bean（也就是我们Java中的类，当然也包">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/images/SSM01.png">
-<meta property="og:updated_time" content="2018-07-27T04:28:38.504Z">
+<meta property="og:updated_time" content="2018-07-27T04:40:21.026Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SSM(Spring+SpringMVC+Mybatis)">
 <meta name="twitter:description" content="SSM框架是spring MVC ，spring和mybatis框架的整合，是标准的MVC模式，将整个系统划分为表现层，controller层，service层，DAO层四层使用spring MVC负责请求的转发和视图管理spring实现业务对象管理，mybatis作为数据对象的持久化引擎 Spring我们平时开发接触最多的估计就是IOC容器，它可以装载bean（也就是我们Java中的类，当然也包">
 <meta name="twitter:image" content="http://yoursite.com/images/SSM01.png">
   
-    <link rel="alternative" href="/atom.xml" title="猪猪猪头1.32" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="猪猪猪头1.33" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -180,6 +180,7 @@
 <h3 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h3><p>我们平时开发接触最多的估计就是IOC容器，它可以装载bean（也就是我们Java中的类，当然也包括service dao里面的），有了这个机制，我们就不用在每次使用这个类的时候为它初始化，很少看到关键字new。另外spring的aop，事务管理等等都是我们经常用到的。</p>
 <h4 id="IOC"><a href="#IOC" class="headerlink" title="IOC"></a>IOC</h4><p>控制反转，是一种降低对象之间耦合关系的设计思想，面试的时候最好能说出来个例子，加深理解。例子：租房子，以前租房子需要一个房子一个房子找，费时费力，然后现在加入一个房屋中介，把你需要的房型告诉中介，就可以直接选到需要的房子，中介就相当于spring容器。</p>
 <h4 id="AOP"><a href="#AOP" class="headerlink" title="AOP"></a>AOP</h4><p>面向切面编程，是面向对象开发的一种补充，它允许开发人员在不改变原来模型的基础上动态的修改模型以满足新的需求，如：动态的增加日志、安全或异常处理等。AOP使业务逻辑各部分间的耦合度降低，提高程序可重用性，提高开发效率。</p>
+<a id="more"></a>
 <h3 id="SprinMVC"><a href="#SprinMVC" class="headerlink" title="SprinMVC"></a>SprinMVC</h3><p>一种设计模式<br>1、客户端发送请求到DispacherServlet（分发器）<br>2、由DispacherServlet控制器查询HanderMapping，找到处理请求的Controller<br>3、Controller调用业务逻辑处理后，返回ModelAndView<br>4、DispacherSerclet查询视图解析器，找到ModelAndView指定的视图<br>5、视图负责将结果显示到客户端</p>
 <h3 id="Mybatis-半自动ROM"><a href="#Mybatis-半自动ROM" class="headerlink" title="Mybatis(半自动ROM)"></a>Mybatis(半自动ROM)</h3><p>mybatis是对jdbc的封装，它让数据库底层操作变的透明。mybatis的操作都是围绕一个sqlSessionFactory实例展开的。mybatis通过配置文件关联到各实体类的Mapper文件，Mapper文件中配置了每个类对数据库所需进行的sql语句映射。在每次与数据库交互时，通过sqlSessionFactory拿到一个sqlSession，再执行sql命令</p>
 <h3 id="SSM整合"><a href="#SSM整合" class="headerlink" title="SSM整合"></a>SSM整合</h3><h4 id="项目基本结构"><a href="#项目基本结构" class="headerlink" title="项目基本结构"></a>项目基本结构</h4><p><img src="/images/SSM01.png"></p>
