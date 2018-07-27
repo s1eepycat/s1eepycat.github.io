@@ -6,23 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Collection | 猪猪猪头1.40</title>
+  <title>Collection | 猪猪猪头1.41</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Java中的集合类：是一种工具类，就像是容器，存储任意数量的具有共同属性的对象。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Collection">
 <meta property="og:url" content="http://yoursite.com/2017/12/02/Collection/index.html">
-<meta property="og:site_name" content="猪猪猪头1.40">
+<meta property="og:site_name" content="猪猪猪头1.41">
 <meta property="og:description" content="Java中的集合类：是一种工具类，就像是容器，存储任意数量的具有共同属性的对象。">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/images/Collection01.jpg">
-<meta property="og:updated_time" content="2018-07-27T14:58:44.054Z">
+<meta property="og:updated_time" content="2018-07-27T15:09:56.627Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Collection">
 <meta name="twitter:description" content="Java中的集合类：是一种工具类，就像是容器，存储任意数量的具有共同属性的对象。">
 <meta name="twitter:image" content="http://yoursite.com/images/Collection01.jpg">
   
-    <link rel="alternative" href="/atom.xml" title="猪猪猪头1.40" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="猪猪猪头1.41" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -178,12 +178,21 @@
       
         <p>Java中的集合类：是一种工具类，就像是容器，存储任意数量的具有共同属性的对象。<br><br><br><a id="more"></a></p>
 <h3 id="集合的分类"><a href="#集合的分类" class="headerlink" title="集合的分类"></a>集合的分类</h3><p>视图<br><img src="/images/Collection01.jpg"></p>
-<h3 id="集合的底层实现和原理"><a href="#集合的底层实现和原理" class="headerlink" title="集合的底层实现和原理"></a>集合的底层实现和原理</h3><h4 id="ArrayList"><a href="#ArrayList" class="headerlink" title="ArrayList"></a>ArrayList</h4><p>1.ArrayList是List接口的可变数组非同步实现，并允许包括null在内的所有元素。<br>2.底层使用数组实现<br>3.该集合是可变长度数组，数组扩容时，会将老数组中的元素重新拷贝一份到新的数组中，每次数组容量增长大约是其容量的1.5倍，这种操作的代价很高。<br>4.采用了Fail-Fast机制，面对并发的修改时，迭代器很快就会完全失败，而不是冒着在将来某个不确定时间发生任意不确定行为的风险<br>5.remove方法会让下标到数组末尾的元素向前移动一个单位，并把最后一位的值置空，方便GC<br><a href="https://www.cnblogs.com/leesf456/p/5308358.html" target="_blank" rel="noopener">参考文献</a></p>
+<h3 id="集合的底层实现和原理"><a href="#集合的底层实现和原理" class="headerlink" title="集合的底层实现和原理"></a>集合的底层实现和原理</h3><h4 id="ArrayList"><a href="#ArrayList" class="headerlink" title="ArrayList"></a>ArrayList</h4><p>1.ArrayList是List接口的可变数组非同步实现，并允许包括null在内的所有元素。<br>2.底层使用数组实现<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">private transient Object[] elementData;</span><br></pre></td></tr></table></figure></p>
+<p>3.该集合是可变长度数组，数组扩容时，会将老数组中的元素重新拷贝一份到新的数组中，每次数组容量增长大约是其容量的1.5倍，这种操作的代价很高。<br>4.采用了Fail-Fast机制，面对并发的修改时，迭代器很快就会完全失败，而不是冒着在将来某个不确定时间发生任意不确定行为的风险<br>5.remove方法会让下标到数组末尾的元素向前移动一个单位，并把最后一位的值置空，方便GC</p>
+<p>构造方法：<br>ArrayList提供了三种方式的构造器，可以构造一个默认初始容量为10的空列表、构造一个指定初始容量的空列表以及构造一个包含指定collection的元素的列表，这些元素按照该collection的迭代器返回它们的顺序排列的。</p>
+<p><a href="https://www.cnblogs.com/leesf456/p/5308358.html" target="_blank" rel="noopener">参考文献</a></p>
 <h4 id="LinkedList"><a href="#LinkedList" class="headerlink" title="LinkedList"></a>LinkedList</h4><p>1.LinkedList是List接口的双向链表非同步实现，并允许包括null在内的所有元素。<br>2.底层的数据结构是基于双向链表的，该数据结构我们称为节点<br>3.双向链表节点对应的类Node的实例，Node中包含成员变量：prev，next，item。其中，prev是该节点的上一个节点，next是该节点的下一个节点，item是该节点所包含的值。<br>4.它的查找是分两半查找，先判断index是在链表的哪一半，然后再去对应区域查找，这样最多只要遍历链表的一半节点即可找到<br><a href="https://www.cnblogs.com/leesf456/p/5308843.html" target="_blank" rel="noopener">参考文献</a></p>
 <h4 id="HashMap"><a href="#HashMap" class="headerlink" title="HashMap"></a>HashMap</h4><p>1.HashMap是基于哈希表的Map接口的非同步实现，允许使用null值和null键，但不保证映射的顺序。<br>2.底层使用数组实现，数组中每一项是个单向链表，即数组和链表的结合体；当链表长度大于一定阈值时，链表转换为红黑树，这样减少链表查询时间。<br>3.HashMap在底层将key-value当成一个整体进行处理，这个整体就是一个Node对象。HashMap底层采用一个Node[]数组来保存所有的key-value对，当需要存储一个Node对象时，会根据key的hash算法来决定其在数组中的存储位置，在根据equals方法决定其在该数组位置上的链表中的存储位置；当需要取出一个Node时，也会根据key的hash算法找到其在数组中的存储位置，再根据equals方法从该位置上的链表中取出该Node。<br>4.HashMap进行数组扩容需要重新计算扩容后每个元素在数组中的位置，很耗性能<br>5.采用了Fail-Fast机制，通过一个modCount值记录修改次数，对HashMap内容的修改都将增加这个值。迭代器初始化过程中会将这个值赋给迭代器的expectedModCount，在迭代过程中，判断modCount跟expectedModCount是否相等，如果不相等就表示已经有其他线程修改了Map，马上抛出异常<br><a href="http://zhangshixi.iteye.com/blog/672697" target="_blank" rel="noopener">参考文献</a></p>
 <h4 id="HashSet"><a href="#HashSet" class="headerlink" title="HashSet"></a>HashSet</h4><p>1.HashSet由哈希表(实际上是一个HashMap实例)支持，不保证set的迭代顺序，并允许使用null元素。<br>2.基于HashMap实现，API也是对HashMap的行为进行了封装，可参考HashMap<br><a href="http://zhangshixi.iteye.com/blog/673143l" target="_blank" rel="noopener">参考文献</a></p>
 <h4 id="LinkedHashMap"><a href="#LinkedHashMap" class="headerlink" title="LinkedHashMap"></a>LinkedHashMap</h4><p>1.LinkedHashMap继承于HashMap，底层使用哈希表和双向链表来保存所有元素，并且它是非同步，允许使用null值和null键。<br>2.基本操作与父类HashMap相似，通过重写HashMap相关方法，重新定义了数组中保存的元素Entry，来实现自己的链接列表特性。该Entry除了保存当前对象的引用外，还保存了其上一个元素before和下一个元素after的引用，从而构成了双向链接列表<br><a href="http://zhangshixi.iteye.com/blog/673789l" target="_blank" rel="noopener">参考文献</a></p>
 <h4 id="LinkedHashSet"><a href="#LinkedHashSet" class="headerlink" title="LinkedHashSet"></a>LinkedHashSet</h4><p>对于LinkedHashSet而言，它继承与HashSet、又基于LinkedHashMap来实现的。LinkedHashSet底层使用LinkedHashMap来保存所有元素，它继承与HashSet，其所有的方法操作上又与HashSet相同。<br><a href="http://zhangshixi.iteye.com/blog/673319l" target="_blank" rel="noopener">参考文献</a></p>
+<p>###集合扩容问题</p>
+<h4 id="ArrayList-1"><a href="#ArrayList-1" class="headerlink" title="ArrayList"></a>ArrayList</h4><p>ArrayList 默认初始容量为10<br>          线程不安全，查询速度快<br>　　　　  底层数据结构是数组结构<br>　　　　  扩容增量：原容量的 0.5倍<br>　　　　  如 ArrayList的容量为10，一次扩容后是容量为15</p>
+<h4 id="Vector"><a href="#Vector" class="headerlink" title="Vector"></a>Vector</h4><p>Vector：线程安全，但速度慢<br>　　　　底层数据结构是数组结构<br>　　　　加载因子为1：即当 元素个数 超过 容量长度 时，进行扩容<br>　　　　扩容增量：原容量的 1倍<br>　　　　如 Vector的容量为10，一次扩容后是容量为20</p>
+<h4 id="Set-集-元素无序的、不可重复。"><a href="#Set-集-元素无序的、不可重复。" class="headerlink" title="Set(集) 元素无序的、不可重复。"></a>Set(集) 元素无序的、不可重复。</h4><p>HashSet：线程不安全，存取速度快<br>　　　　　底层实现是一个HashMap（保存数据），实现Set接口<br>　　　　　默认初始容量为16（为何是16，见下方对HashMap的描述）<br>　　　　　加载因子为0.75：即当 元素个数 超过 容量长度的0.75倍 时，进行扩容<br>　　　　　扩容增量：原容量的 1 倍<br>　　　　　如 HashSet的容量为16，一次扩容后是容量为32</p>
+<p>在JDK1.8中我们可以发现其实HashSet 的创建其实就是一个HashMap </p>
+<h4 id="Map是一个双列集合"><a href="#Map是一个双列集合" class="headerlink" title="Map是一个双列集合"></a>Map是一个双列集合</h4><p>HashMap：默认初始容量为16<br>　　　　　（为何是16：16是2^4，可以提高查询效率，另外，32=16&lt;<1 –="">至于详细的原因可另行分析，或分析源代码）<br>　　　　　加载因子为0.75：即当 元素个数 超过 容量长度的0.75倍 时，进行扩容<br>　　　　　扩容增量：原容量的 1 倍<br>　　　　　如 HashSet的容量为16，一次扩容后是容量为32 </1></p>
 
       
 
