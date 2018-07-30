@@ -6,21 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>如何处理高并发 | 猪猪猪头1.42</title>
+  <title>如何处理高并发 | 猪猪猪头1.43</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Web项目开发过程中如果遇到数据访问量过大，在面对大量用户访问、高并发请求方面，基本的解决方案集中在这样几个环节：使用高性能的服务器、高性能的数据库、高效率的编程语言、还有高性能的Web容器。但是除了这几个方面，还没法根本解决大型网站面临的高负载和高并发问题。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何处理高并发">
 <meta property="og:url" content="http://yoursite.com/2018/05/15/处理高并发/index.html">
-<meta property="og:site_name" content="猪猪猪头1.42">
+<meta property="og:site_name" content="猪猪猪头1.43">
 <meta property="og:description" content="Web项目开发过程中如果遇到数据访问量过大，在面对大量用户访问、高并发请求方面，基本的解决方案集中在这样几个环节：使用高性能的服务器、高性能的数据库、高效率的编程语言、还有高性能的Web容器。但是除了这几个方面，还没法根本解决大型网站面临的高负载和高并发问题。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-30T00:59:23.513Z">
+<meta property="og:updated_time" content="2018-07-30T01:21:35.099Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何处理高并发">
 <meta name="twitter:description" content="Web项目开发过程中如果遇到数据访问量过大，在面对大量用户访问、高并发请求方面，基本的解决方案集中在这样几个环节：使用高性能的服务器、高性能的数据库、高效率的编程语言、还有高性能的Web容器。但是除了这几个方面，还没法根本解决大型网站面临的高负载和高并发问题。">
   
-    <link rel="alternative" href="/atom.xml" title="猪猪猪头1.42" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="猪猪猪头1.43" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -182,7 +182,9 @@
 
 <h3 id="缓存"><a href="#缓存" class="headerlink" title="缓存"></a>缓存</h3><p>架构方面的缓存，对Apache比较熟悉的人都能知道Apache提供了自己的缓存模块，也可以使用外加的Squid模块进行缓存，这两种方式均可以有效的提高Apache的访问响应能力</p><br><p>网站程序开发方面的缓存，Linux上提供的Memory Cache是常用的缓存接口，可以在web开发中使用，比如用Java开发的时候就可以调用MemoryCache对一些数据进行缓存和通讯共享，一些大型社区使用了这样的架构。</p>
 
-<h3 id="镜像"><a href="#镜像" class="headerlink" title="镜像"></a>镜像</h3>
+<h3 id="镜像"><a href="#镜像" class="headerlink" title="镜像"></a>镜像</h3><p>镜像是大型网站常采用的提高性能和数据安全性的方式，镜像的技术可以解决不同网络接入商和地域带来的用户访问速度差异，比如ChinaNet和EduNet之间的差异就促使了很多网站在教育网内搭建镜像站点，数据进行定时更新或者实时更新。在镜像的细节技术方面，这里不阐述太深，有很多专业的现成的解决架构和产品可选。也有廉价的通过软件实现的思路，比如Linux上的rsync等工具。</p>
+<h3 id="负载均衡"><a href="#负载均衡" class="headerlink" title="负载均衡"></a>负载均衡</h3><p>负载均衡将是大型网站解决高负荷访问和大量并发请求采用的终极解决办法<br>具体操作不明白</p>
+
       
 
       
