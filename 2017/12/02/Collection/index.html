@@ -16,7 +16,7 @@
 <meta property="og:description" content="Java中的集合类：是一种工具类，就像是容器，存储任意数量的具有共同属性的对象。">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/images/Collection01.jpg">
-<meta property="og:updated_time" content="2018-07-27T15:09:56.627Z">
+<meta property="og:updated_time" content="2018-07-30T14:40:15.020Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Collection">
 <meta name="twitter:description" content="Java中的集合类：是一种工具类，就像是容器，存储任意数量的具有共同属性的对象。">
@@ -187,8 +187,7 @@
 <h4 id="HashSet"><a href="#HashSet" class="headerlink" title="HashSet"></a>HashSet</h4><p>1.HashSet由哈希表(实际上是一个HashMap实例)支持，不保证set的迭代顺序，并允许使用null元素。<br>2.基于HashMap实现，API也是对HashMap的行为进行了封装，可参考HashMap<br><a href="http://zhangshixi.iteye.com/blog/673143l" target="_blank" rel="noopener">参考文献</a></p>
 <h4 id="LinkedHashMap"><a href="#LinkedHashMap" class="headerlink" title="LinkedHashMap"></a>LinkedHashMap</h4><p>1.LinkedHashMap继承于HashMap，底层使用哈希表和双向链表来保存所有元素，并且它是非同步，允许使用null值和null键。<br>2.基本操作与父类HashMap相似，通过重写HashMap相关方法，重新定义了数组中保存的元素Entry，来实现自己的链接列表特性。该Entry除了保存当前对象的引用外，还保存了其上一个元素before和下一个元素after的引用，从而构成了双向链接列表<br><a href="http://zhangshixi.iteye.com/blog/673789l" target="_blank" rel="noopener">参考文献</a></p>
 <h4 id="LinkedHashSet"><a href="#LinkedHashSet" class="headerlink" title="LinkedHashSet"></a>LinkedHashSet</h4><p>对于LinkedHashSet而言，它继承与HashSet、又基于LinkedHashMap来实现的。LinkedHashSet底层使用LinkedHashMap来保存所有元素，它继承与HashSet，其所有的方法操作上又与HashSet相同。<br><a href="http://zhangshixi.iteye.com/blog/673319l" target="_blank" rel="noopener">参考文献</a></p>
-<p>###集合扩容问题</p>
-<h4 id="ArrayList-1"><a href="#ArrayList-1" class="headerlink" title="ArrayList"></a>ArrayList</h4><p>ArrayList 默认初始容量为10<br>          线程不安全，查询速度快<br>　　　　  底层数据结构是数组结构<br>　　　　  扩容增量：原容量的 0.5倍<br>　　　　  如 ArrayList的容量为10，一次扩容后是容量为15</p>
+<h3 id="集合扩容问题"><a href="#集合扩容问题" class="headerlink" title="集合扩容问题"></a>集合扩容问题</h3><h4 id="ArrayList-1"><a href="#ArrayList-1" class="headerlink" title="ArrayList"></a>ArrayList</h4><p>ArrayList 默认初始容量为10<br>          线程不安全，查询速度快<br>　　　　  底层数据结构是数组结构<br>　　　　  扩容增量：原容量的 0.5倍<br>　　　　  如 ArrayList的容量为10，一次扩容后是容量为15</p>
 <h4 id="Vector"><a href="#Vector" class="headerlink" title="Vector"></a>Vector</h4><p>Vector：线程安全，但速度慢<br>　　　　底层数据结构是数组结构<br>　　　　加载因子为1：即当 元素个数 超过 容量长度 时，进行扩容<br>　　　　扩容增量：原容量的 1倍<br>　　　　如 Vector的容量为10，一次扩容后是容量为20</p>
 <h4 id="Set-集-元素无序的、不可重复。"><a href="#Set-集-元素无序的、不可重复。" class="headerlink" title="Set(集) 元素无序的、不可重复。"></a>Set(集) 元素无序的、不可重复。</h4><p>HashSet：线程不安全，存取速度快<br>　　　　　底层实现是一个HashMap（保存数据），实现Set接口<br>　　　　　默认初始容量为16（为何是16，见下方对HashMap的描述）<br>　　　　　加载因子为0.75：即当 元素个数 超过 容量长度的0.75倍 时，进行扩容<br>　　　　　扩容增量：原容量的 1 倍<br>　　　　　如 HashSet的容量为16，一次扩容后是容量为32</p>
 <p>在JDK1.8中我们可以发现其实HashSet 的创建其实就是一个HashMap </p>
