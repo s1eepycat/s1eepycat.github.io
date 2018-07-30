@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>猪猪猪头1.49</title>
+  <title>网络编程 | 猪猪猪头1.49</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="猪猪猪头1.49">
-<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+  <meta name="description" content="性能优良的SQL语句能让我们的开发的项目节省不少资源">
+<meta property="og:type" content="article">
+<meta property="og:title" content="网络编程">
+<meta property="og:url" content="http://yoursite.com/2018/07/30/数据库查询优化/index.html">
 <meta property="og:site_name" content="猪猪猪头1.49">
+<meta property="og:description" content="性能优良的SQL语句能让我们的开发的项目节省不少资源">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-07-30T13:54:33.411Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="猪猪猪头1.49">
+<meta name="twitter:title" content="网络编程">
+<meta name="twitter:description" content="性能优良的SQL语句能让我们的开发的项目节省不少资源">
   
     <link rel="alternative" href="/atom.xml" title="猪猪猪头1.49" type="application/atom+xml">
   
@@ -150,34 +154,55 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-Thymeleaf" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-数据库查询优化" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/22/Thymeleaf/">The thymeleaf</a>
+    <h1 class="article-title" itemprop="name">
+      网络编程
     </h1>
   
 
         
-        <a href="/2017/12/22/Thymeleaf/" class="archive-article-date">
-  	<time datetime="2017-12-22T12:05:56.961Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-22</time>
+        <a href="/2018/07/30/数据库查询优化/" class="archive-article-date">
+  	<time datetime="2018-07-30T13:47:42.706Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-30</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>简单说，Thymeleaf 是一个跟 Velocity、FreeMarker 类似的模板引擎，它可以完全替代 JSP 。相较与其他的模板引擎，它有如下三个极吸引人的特点：<br>1.Thymeleaf 在有网络和无网络的环境下皆可运行，即它可以让美工在浏览器查看页面的静态效果，也可以让程序员在服务器查看带数据的动态页面效果。这是由于它支持 html 原型，然后在 html 标签里增加额外的属性来达到模板+数据的展示方式。浏览器解释 html 时会忽略未定义的标签属性，所以 thymeleaf 的模板可以静态地运行；当有数据返回到页面时，Thymeleaf 标签会动态地替换掉静态内容，使页面动态显示。<br>2.Thymeleaf 开箱即用的特性。它提供标准和spring标准两种方言，可以直接套用模板实现JSTL、 OGNL表达式效果，避免每天套模板、该jstl、改标签的困扰。同时开发人员也可以扩展和创建自定义的方言。<br>3.Thymeleaf 提供spring标准方言和一个与 SpringMVC 完美集成的可选模块，可以快速的实现表单绑定、属性编辑器、国际化等功能。<br><br><br>
-        
-          <a class="article-more-a" href="/2017/12/22/Thymeleaf/#more">more >></a>
-        
+        <p>性能优良的SQL语句能让我们的开发的项目节省不少资源<br><br><br><a id="more"></a></p>
+<h4 id="SELECT子句中避免使用‘-’"><a href="#SELECT子句中避免使用‘-’" class="headerlink" title="SELECT子句中避免使用‘*’"></a>SELECT子句中避免使用‘*’</h4><p>Oracle在解析的过程中, 会将‘*’依次转换成所有的列名, 这个工作是通过查询数据字典完成的, 这意味着将耗费更多的时间</p>
+<h4 id="选择最有效率的表名顺序-只在基于规则的优化器中有效"><a href="#选择最有效率的表名顺序-只在基于规则的优化器中有效" class="headerlink" title="选择最有效率的表名顺序(只在基于规则的优化器中有效)"></a>选择最有效率的表名顺序(只在基于规则的优化器中有效)</h4><p>Oracle的解析器按照从右到左的顺序处理FROM子句中的表名，FROM子句中写在最后的表(基础表 driving table)将被最先处理，在FROM子句中包含多个表的情况下,你必须选择记录条数最少的表作为基础表。如果有3个以上的表连接查询, 那就需要选择交叉表(intersection table)作为基础表, 交叉表是指那个被其他表所引用的表</p>
+<h4 id="WHERE子句中的连接顺序"><a href="#WHERE子句中的连接顺序" class="headerlink" title="WHERE子句中的连接顺序"></a>WHERE子句中的连接顺序</h4><p>Oracle采用自下而上的顺序解析WHERE子句,根据这个原理,表之间的连接必须写在其他WHERE条件之前, 那些可以过滤掉最大数量记录的条件必须写在WHERE子句的末尾</p>
+<h4 id="减少访问数据库的次数"><a href="#减少访问数据库的次数" class="headerlink" title="减少访问数据库的次数"></a>减少访问数据库的次数</h4><p>Oracle在内部执行了许多工作: 解析SQL语句, 估算索引的利用率, 绑定变量 , 读数据块等</p>
+<h4 id="在SQLPlus-SQLForms和Pro-C中重新设置ARRAYSIZE参数-可以增加每次数据库访问的检索数据量-建议值为200"><a href="#在SQLPlus-SQLForms和Pro-C中重新设置ARRAYSIZE参数-可以增加每次数据库访问的检索数据量-建议值为200" class="headerlink" title="在SQLPlus , SQLForms和Pro*C中重新设置ARRAYSIZE参数, 可以增加每次数据库访问的检索数据量 ,建议值为200"></a>在SQL<em>Plus , SQL</em>Forms和Pro*C中重新设置ARRAYSIZE参数, 可以增加每次数据库访问的检索数据量 ,建议值为200</h4><h4 id="使用DECODE函数可以避免重复扫描相同记录或重复连接相同的表"><a href="#使用DECODE函数可以避免重复扫描相同记录或重复连接相同的表" class="headerlink" title="使用DECODE函数可以避免重复扫描相同记录或重复连接相同的表"></a>使用DECODE函数可以避免重复扫描相同记录或重复连接相同的表</h4><h4 id="整合简单-无关联的数据库访问"><a href="#整合简单-无关联的数据库访问" class="headerlink" title="整合简单,无关联的数据库访问"></a>整合简单,无关联的数据库访问</h4><h4 id="尽量多使用COMMIT"><a href="#尽量多使用COMMIT" class="headerlink" title="尽量多使用COMMIT"></a>尽量多使用COMMIT</h4><h4 id="用Where子句替换HAVING子句"><a href="#用Where子句替换HAVING子句" class="headerlink" title="用Where子句替换HAVING子句"></a>用Where子句替换HAVING子句</h4>
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -186,16 +211,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/22/Thymeleaf/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/07/30/数据库查询优化/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2018/07/30/Socket/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">网络编程</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -215,337 +299,14 @@
 
 
 
-
-  
-    <article id="post-SSM框架" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/22/SSM框架/">SSM(Spring+SpringMVC+Mybatis)</a>
-    </h1>
-  
-
-        
-        <a href="/2017/12/22/SSM框架/" class="archive-article-date">
-  	<time datetime="2017-12-22T12:05:36.215Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>SSM框架是spring MVC ，spring和mybatis框架的整合，是标准的MVC模式，将整个系统划分为表现层，controller层，service层，DAO层四层<br>使用spring MVC负责请求的转发和视图管理<br>spring实现业务对象管理，mybatis作为数据对象的持久化引擎<br><br><br>
-        
-          <a class="article-more-a" href="/2017/12/22/SSM框架/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/22/SSM框架/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-数据库分页" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/02/数据库分页/">数据库中的分页</a>
-    </h1>
-  
-
-        
-        <a href="/2017/12/02/数据库分页/" class="archive-article-date">
-  	<time datetime="2017-12-02T12:03:49.730Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Web项目开发过程中，经常加载大量的数据，当要加载的数据量较小时我们可以直接查询显示，可是当数据量过于庞大时这样做会造成页面加载过慢，所以我们会用到数据库的分页。<br><br><br>
-        
-          <a class="article-more-a" href="/2017/12/02/数据库分页/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/02/数据库分页/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Collection" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/02/Collection/">Collection</a>
-    </h1>
-  
-
-        
-        <a href="/2017/12/02/Collection/" class="archive-article-date">
-  	<time datetime="2017-12-02T12:03:14.956Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Java中的集合类：是一种工具类，就像是容器，存储任意数量的具有共同属性的对象。<br><br><br>
-        
-          <a class="article-more-a" href="/2017/12/02/Collection/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/02/Collection/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-IO" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/26/IO/">IO流</a>
-    </h1>
-  
-
-        
-        <a href="/2017/10/26/IO/" class="archive-article-date">
-  	<time datetime="2017-10-26T10:11:01.163Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>IO流简单来说就是Input和Output流，IO流主要是用来处理设备之间的数据传输，Java对于数据的操作都是通过流实现，而java用于操作流的对象都在IO包中。<br><br><br>
-        
-          <a class="article-more-a" href="/2017/10/26/IO/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/26/IO/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Reflet" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/20/Reflet/">The Reflect(反射)</a>
-    </h1>
-  
-
-        
-        <a href="/2017/10/20/Reflet/" class="archive-article-date">
-  	<time datetime="2017-10-20T12:41:22.223Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>JAVA反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意方法和属性；这种动态获取信息以及动态调用对象方法的功能称为java语言的反射机制<br>参考：<a href="https://baike.baidu.com/item/JAVA%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6/6015990?fr=aladdin" target="_blank" rel="noopener">Reflect</a><br><br><br>
-        
-          <a class="article-more-a" href="/2017/10/20/Reflet/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/20/Reflet/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -568,8 +329,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
