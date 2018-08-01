@@ -6,19 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>网络编程 | 猪猪猪头1.50</title>
+  <title>Archives: 2018/8 | 猪猪猪头1.50</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="性能优良的SQL语句能让我们的开发的项目节省不少资源">
-<meta property="og:type" content="article">
-<meta property="og:title" content="网络编程">
-<meta property="og:url" content="http://yoursite.com/2018/07/30/数据库查询优化/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="猪猪猪头1.50">
+<meta property="og:url" content="http://yoursite.com/archives/2018/08/index.html">
 <meta property="og:site_name" content="猪猪猪头1.50">
-<meta property="og:description" content="性能优良的SQL语句能让我们的开发的项目节省不少资源">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-30T13:54:33.411Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="网络编程">
-<meta name="twitter:description" content="性能优良的SQL语句能让我们的开发的项目节省不少资源">
+<meta name="twitter:title" content="猪猪猪头1.50">
   
     <link rel="alternative" href="/atom.xml" title="猪猪猪头1.50" type="application/atom+xml">
   
@@ -154,169 +150,49 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-数据库查询优化" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      网络编程
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2018" class="archive-year">2018</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2018/08/01/数据库中常用的函数/" class="archive-article-date">
+  	<time datetime="2018-08-01T00:18:27.219Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-01</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2018/08/01/数据库中常用的函数/">数据库中常用的函数</a>
     </h1>
   
 
-        
-        <a href="/2018/07/30/数据库查询优化/" class="archive-article-date">
-  	<time datetime="2018-07-30T13:47:42.706Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>性能优良的SQL语句能让我们的开发的项目节省不少资源<br><br><br><a id="more"></a></p>
-<h4 id="SELECT子句中避免使用‘-’"><a href="#SELECT子句中避免使用‘-’" class="headerlink" title="SELECT子句中避免使用‘*’"></a>SELECT子句中避免使用‘*’</h4><p>Oracle在解析的过程中, 会将‘*’依次转换成所有的列名, 这个工作是通过查询数据字典完成的, 这意味着将耗费更多的时间</p>
-<h4 id="选择最有效率的表名顺序-只在基于规则的优化器中有效"><a href="#选择最有效率的表名顺序-只在基于规则的优化器中有效" class="headerlink" title="选择最有效率的表名顺序(只在基于规则的优化器中有效)"></a>选择最有效率的表名顺序(只在基于规则的优化器中有效)</h4><p>Oracle的解析器按照从右到左的顺序处理FROM子句中的表名，FROM子句中写在最后的表(基础表 driving table)将被最先处理，在FROM子句中包含多个表的情况下,你必须选择记录条数最少的表作为基础表。如果有3个以上的表连接查询, 那就需要选择交叉表(intersection table)作为基础表, 交叉表是指那个被其他表所引用的表</p>
-<h4 id="WHERE子句中的连接顺序"><a href="#WHERE子句中的连接顺序" class="headerlink" title="WHERE子句中的连接顺序"></a>WHERE子句中的连接顺序</h4><p>Oracle采用自下而上的顺序解析WHERE子句,根据这个原理,表之间的连接必须写在其他WHERE条件之前, 那些可以过滤掉最大数量记录的条件必须写在WHERE子句的末尾</p>
-<h4 id="减少访问数据库的次数"><a href="#减少访问数据库的次数" class="headerlink" title="减少访问数据库的次数"></a>减少访问数据库的次数</h4><p>Oracle在内部执行了许多工作: 解析SQL语句, 估算索引的利用率, 绑定变量 , 读数据块等</p>
-<h4 id="在SQLPlus-SQLForms和Pro-C中重新设置ARRAYSIZE参数-可以增加每次数据库访问的检索数据量-建议值为200"><a href="#在SQLPlus-SQLForms和Pro-C中重新设置ARRAYSIZE参数-可以增加每次数据库访问的检索数据量-建议值为200" class="headerlink" title="在SQLPlus , SQLForms和Pro*C中重新设置ARRAYSIZE参数, 可以增加每次数据库访问的检索数据量 ,建议值为200"></a>在SQL<em>Plus , SQL</em>Forms和Pro*C中重新设置ARRAYSIZE参数, 可以增加每次数据库访问的检索数据量 ,建议值为200</h4><h4 id="使用DECODE函数可以避免重复扫描相同记录或重复连接相同的表"><a href="#使用DECODE函数可以避免重复扫描相同记录或重复连接相同的表" class="headerlink" title="使用DECODE函数可以避免重复扫描相同记录或重复连接相同的表"></a>使用DECODE函数可以避免重复扫描相同记录或重复连接相同的表</h4><h4 id="整合简单-无关联的数据库访问"><a href="#整合简单-无关联的数据库访问" class="headerlink" title="整合简单,无关联的数据库访问"></a>整合简单,无关联的数据库访问</h4><h4 id="尽量多使用COMMIT"><a href="#尽量多使用COMMIT" class="headerlink" title="尽量多使用COMMIT"></a>尽量多使用COMMIT</h4><h4 id="用Where子句替换HAVING子句"><a href="#用Where子句替换HAVING子句" class="headerlink" title="用Where子句替换HAVING子句"></a>用Where子句替换HAVING子句</h4>
-      
+        <div class="article-info info-on-right">
+          
+          
 
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
         </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
-        </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/07/30/数据库查询优化/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2018/08/01/数据库中常用的函数/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          数据库中常用的函数
-        
-      </div>
-    </a>
   
   
-    <a href="/2018/07/30/Socket/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">网络编程</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -339,8 +215,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
