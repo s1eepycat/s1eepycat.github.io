@@ -6,19 +6,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>数据库中常用的函数 | 猪猪猪头1.51</title>
+  <title>Habernate(全自动ORM框架) | 猪猪猪头1.51</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="数学函数主要用于处理数字，包括整型、浮点数等">
+  <meta name="description" content="Hibernate完成对象模型和基于SQL的关系模型的映射关系">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数据库中常用的函数">
-<meta property="og:url" content="http://yoursite.com/2018/08/01/数据库中常用的函数/index.html">
+<meta property="og:title" content="Habernate(全自动ORM框架)">
+<meta property="og:url" content="http://yoursite.com/2018/07/30/Hibernate/index.html">
 <meta property="og:site_name" content="猪猪猪头1.51">
-<meta property="og:description" content="数学函数主要用于处理数字，包括整型、浮点数等">
+<meta property="og:description" content="Hibernate完成对象模型和基于SQL的关系模型的映射关系">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-01T00:36:24.390Z">
+<meta property="og:image" content="http://yoursite.com/images/hibernate01.jpg">
+<meta property="og:image" content="http://yoursite.com/images/hibernate02.jpg">
+<meta property="og:image" content="http://yoursite.com/images/hibernate03.jpg">
+<meta property="og:image" content="http://yoursite.com/images/hibernate04.jpg">
+<meta property="og:image" content="http://yoursite.com/images/hibernate05.jpg">
+<meta property="og:updated_time" content="2018-08-01T14:05:42.854Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="数据库中常用的函数">
-<meta name="twitter:description" content="数学函数主要用于处理数字，包括整型、浮点数等">
+<meta name="twitter:title" content="Habernate(全自动ORM框架)">
+<meta name="twitter:description" content="Hibernate完成对象模型和基于SQL的关系模型的映射关系">
+<meta name="twitter:image" content="http://yoursite.com/images/hibernate01.jpg">
   
     <link rel="alternative" href="/atom.xml" title="猪猪猪头1.51" type="application/atom+xml">
   
@@ -154,44 +160,32 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-数据库中常用的函数" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Hibernate" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      数据库中常用的函数
+      Habernate(全自动ORM框架)
     </h1>
   
 
         
-        <a href="/2018/08/01/数据库中常用的函数/" class="archive-article-date">
-  	<time datetime="2018-08-01T00:18:27.219Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-01</time>
+        <a href="/2018/07/30/Hibernate/" class="archive-article-date">
+  	<time datetime="2018-07-30T01:28:00.180Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-30</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>数学函数主要用于处理数字，包括整型、浮点数等<br><br><br><a id="more"></a></p>
-<h3 id="数值型函数"><a href="#数值型函数" class="headerlink" title="数值型函数"></a>数值型函数</h3><h4 id="ABS-x-abs-x-返回x的绝对值"><a href="#ABS-x-abs-x-返回x的绝对值" class="headerlink" title="ABS(x)    abs(x) 返回x的绝对值"></a>ABS(x)    abs(x) 返回x的绝对值</h4><p>SELECT ABS(-1) – 返回1</p>
-<h4 id="CEIL-x-CEILING-x-cell-x-celling-x-返回大于或等于x的最小整数"><a href="#CEIL-x-CEILING-x-cell-x-celling-x-返回大于或等于x的最小整数" class="headerlink" title="CEIL(x),CEILING(x)    cell(x),celling(x) 返回大于或等于x的最小整数"></a>CEIL(x),CEILING(x)    cell(x),celling(x) 返回大于或等于x的最小整数</h4><p>SELECT CEIL(1.5) – 返回2</p>
-<h4 id="FLOOR-x-floor-x-返回小于或等于x的最大整数"><a href="#FLOOR-x-floor-x-返回小于或等于x的最大整数" class="headerlink" title="FLOOR(x)    floor(x)  返回小于或等于x的最大整数"></a>FLOOR(x)    floor(x)  返回小于或等于x的最大整数</h4><p>SELECT FLOOR(1.5) – 返回1</p>
-<h4 id="RAND-rand-返回0-gt-1的随机数-以当前时间为种子"><a href="#RAND-rand-返回0-gt-1的随机数-以当前时间为种子" class="headerlink" title="RAND()    rand() 返回0-&gt;1的随机数(以当前时间为种子)"></a>RAND()    rand() 返回0-&gt;1的随机数(以当前时间为种子)</h4><p>SELECT RAND() –0.93099315644334<br>RAND(x)    ——以x为种子</p>
-<h4 id="PI-pi-返回圆周率-3-141593）"><a href="#PI-pi-返回圆周率-3-141593）" class="headerlink" title="PI()    pi() 返回圆周率(3.141593）"></a>PI()    pi() 返回圆周率(3.141593）</h4><p>SELECT PI() –3.141593</p>
-<h4 id="power-x-y-返回x的y次幂"><a href="#power-x-y-返回x的y次幂" class="headerlink" title="power(x,y) 返回x的y次幂"></a>power(x,y) 返回x的y次幂</h4><p>select power(2.5,2),power(1.5,0),power(20,-1) from dual;<br>返回：6.25,1,0.05</p>
-<h4 id="round-x-y-返回四舍五入后的值"><a href="#round-x-y-返回四舍五入后的值" class="headerlink" title="round(x[,y]) 返回四舍五入后的值"></a>round(x[,y]) 返回四舍五入后的值</h4><p>参数x,y，数字型表达式,如果y不为整数则截取y整数部分，如果y&gt;0则四舍五入为y位小数，如果y小于0则四舍五入到小数点向左第y位。<br>select round(5555.6666,2.1),round(5555.6666,-2.6),round(5555.6666) from dual;<br>返回：   5555.67     ,    5600    ,    5556</p>
-<h4 id="ASCII-x1-返回字符表达式最左端字符的ASCII-码值"><a href="#ASCII-x1-返回字符表达式最左端字符的ASCII-码值" class="headerlink" title="ASCII(x1) 返回字符表达式最左端字符的ASCII 码值"></a>ASCII(x1) 返回字符表达式最左端字符的ASCII 码值</h4><p>select ascii(‘A’) A,ascii(‘a’) a,ascii(‘ ‘) space,ascii(‘示’) hz from dual;<br>A         A          SPACE        hz</p>
-<hr>
-<p>65        97         32         51902</p>
-<h4 id="INITCAP-c1-返回字符串并将字符串的第一个字母变为大写，其它字母小写"><a href="#INITCAP-c1-返回字符串并将字符串的第一个字母变为大写，其它字母小写" class="headerlink" title="INITCAP(c1) 返回字符串并将字符串的第一个字母变为大写，其它字母小写"></a>INITCAP(c1) 返回字符串并将字符串的第一个字母变为大写，其它字母小写</h4><p>select initcap(‘smith abc aBC’) upp from dual;</p>
-<h2 id="UPP"><a href="#UPP" class="headerlink" title="UPP"></a>UPP</h2><p>Smith Abc Abc</p>
-<h4 id="sysdate-返回当前日期"><a href="#sysdate-返回当前日期" class="headerlink" title="sysdate 返回当前日期"></a>sysdate 返回当前日期</h4><p>select sysdate  hz from dual;<br>返回：2008-11-5</p>
-<h3 id="聚组函数"><a href="#聚组函数" class="headerlink" title="聚组函数"></a>聚组函数</h3><h4 id="AVG-distinct-all-x-统计数据表选中行x列的平均值"><a href="#AVG-distinct-all-x-统计数据表选中行x列的平均值" class="headerlink" title="AVG([distinct|all]x) 统计数据表选中行x列的平均值"></a>AVG([distinct|all]x) 统计数据表选中行x列的平均值</h4><p>select avg(distinct sal),avg(all sal),avg(sal) from table3;<br>结果：  3333.33  2592.59  2592.59</p>
-<h4 id="SUM-distinct-all-x-统计数据表选中行x列的合计值"><a href="#SUM-distinct-all-x-统计数据表选中行x列的合计值" class="headerlink" title="SUM([distinct|all]x) 统计数据表选中行x列的合计值"></a>SUM([distinct|all]x) 统计数据表选中行x列的合计值</h4><p>select SUM(distinct sal),SUM(all sal),SUM(sal) from table3;<br>结果：  6666.66     7777.77     7777.77</p>
-<h4 id="MAX-distinct-all-x-最大值-MAX-distinct-all-x-最小值"><a href="#MAX-distinct-all-x-最大值-MAX-distinct-all-x-最小值" class="headerlink" title="MAX([distinct|all]x) 最大值 MAX([distinct|all]x) 最小值"></a>MAX([distinct|all]x) 最大值 MAX([distinct|all]x) 最小值</h4><p>select MAX(distinct sal),MAX(xm) from table3;<br>结果：5555.55   zhu</p>
-<h3 id="其它函数"><a href="#其它函数" class="headerlink" title="其它函数"></a>其它函数</h3><h4 id="NVL-为空值赋值"><a href="#NVL-为空值赋值" class="headerlink" title="NVL() 为空值赋值"></a>NVL() 为空值赋值</h4><p>#### </p>
+        <p>Hibernate完成对象模型和基于SQL的关系模型的映射关系<br><br><br><a id="more"></a></p>
+<h3 id="简单的Hibernate使用"><a href="#简单的Hibernate使用" class="headerlink" title="简单的Hibernate使用"></a>简单的Hibernate使用</h3><h4 id="jar包导入"><a href="#jar包导入" class="headerlink" title="jar包导入"></a>jar包导入</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--连接mysql的驱动包--&gt;</span><br><span class="line">   &lt;dependency&gt;</span><br><span class="line">     &lt;groupId&gt;mysql&lt;/groupId&gt;</span><br><span class="line">     &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;</span><br><span class="line">     &lt;version&gt;6.0.6&lt;/version&gt;</span><br><span class="line">   &lt;/dependency&gt;</span><br><span class="line">   &lt;!--Log4依赖包--&gt;</span><br><span class="line">   &lt;dependency&gt;</span><br><span class="line">     &lt;groupId&gt;log4j&lt;/groupId&gt;</span><br><span class="line">     &lt;artifactId&gt;log4j&lt;/artifactId&gt;</span><br><span class="line">     &lt;version&gt;1.2.17&lt;/version&gt;</span><br><span class="line">   &lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">   &lt;dependency&gt;</span><br><span class="line">     &lt;groupId&gt;org.slf4j&lt;/groupId&gt;</span><br><span class="line">     &lt;artifactId&gt;slf4j-nop&lt;/artifactId&gt;</span><br><span class="line">     &lt;version&gt;1.6.4&lt;/version&gt;</span><br><span class="line">   &lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">   &lt;!-- 添加javassist --&gt;</span><br><span class="line">   &lt;dependency&gt;</span><br><span class="line">     &lt;groupId&gt;javassist&lt;/groupId&gt;</span><br><span class="line">     &lt;artifactId&gt;javassist&lt;/artifactId&gt;</span><br><span class="line">     &lt;version&gt;3.12.0.GA&lt;/version&gt;</span><br><span class="line">   &lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">   &lt;dependency&gt;</span><br><span class="line">     &lt;groupId&gt;org.hibernate&lt;/groupId&gt;</span><br><span class="line">     &lt;artifactId&gt;hibernate-core&lt;/artifactId&gt;</span><br><span class="line">     &lt;version&gt;3.6.10.Final&lt;/version&gt;</span><br><span class="line">   &lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="配置hibernate-cfg-xml"><a href="#配置hibernate-cfg-xml" class="headerlink" title="配置hibernate.cfg.xml"></a>配置hibernate.cfg.xml</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=<span class="string">'1.0'</span> encoding=<span class="string">'utf-8'</span>?&gt;</span><br><span class="line">&lt;!DOCTYPE hibernate-configuration PUBLIC</span><br><span class="line">        <span class="string">"-//Hibernate/Hibernate Configuration DTD//EN"</span></span><br><span class="line">        <span class="string">"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd"</span>&gt;</span><br><span class="line">&lt;hibernate-configuration&gt;</span><br><span class="line">    &lt;session-factory&gt;</span><br><span class="line">        &lt;!--  mysql账户名  --&gt;</span><br><span class="line">        &lt;property name=<span class="string">"connection.username"</span>&gt;root&lt;/property&gt;</span><br><span class="line"></span><br><span class="line">        &lt;!--  mysql密码  --&gt;</span><br><span class="line">        &lt;property name=<span class="string">"connection.password"</span>&gt;Lk960824&lt;/property&gt;</span><br><span class="line"></span><br><span class="line">        &lt;!--  mysql驱动  --&gt;</span><br><span class="line">        &lt;property name=<span class="string">"connection.driver_class"</span>&gt;com.mysql.cj.jdbc.Driver&lt;/property&gt;</span><br><span class="line"></span><br><span class="line">        &lt;!--  mysql连接URL  --&gt;</span><br><span class="line">        &lt;property name=<span class="string">"connection.url"</span>&gt;jdbc:mysql://localhost:3306/hospital?serverTimezone=Asia/Shanghai&lt;/property&gt;</span><br><span class="line"></span><br><span class="line">        &lt;!--  数据库方言  --&gt;</span><br><span class="line">        &lt;property name=<span class="string">"dialect"</span>&gt;org.hibernate.dialect.MySQLDialect&lt;/property&gt;</span><br><span class="line"></span><br><span class="line">        &lt;!--  显示sql语句  --&gt;</span><br><span class="line">        &lt;property name=<span class="string">"show_sql"</span>&gt;<span class="literal">true</span>&lt;/property&gt;</span><br><span class="line"></span><br><span class="line">        &lt;!--  格式化sql语句  --&gt;</span><br><span class="line">        &lt;property name=<span class="string">"format_sql"</span>&gt;<span class="literal">true</span>&lt;/property&gt;</span><br><span class="line">		</span><br><span class="line">        &lt;!--  根据需要修改数据库  --&gt;</span><br><span class="line">        &lt;property name=<span class="string">"hbm2ddl.auto"</span>&gt;update&lt;/property&gt;</span><br><span class="line">		</span><br><span class="line">		&lt;!--  映射的实体对象  --&gt;</span><br><span class="line">        &lt;mapping class=<span class="string">"myhabernate.domain.AdminsEntity"</span>/&gt;</span><br><span class="line">    &lt;/session-factory&gt;</span><br><span class="line">&lt;/hibernate-configuration&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="使用过程"><a href="#使用过程" class="headerlink" title="使用过程"></a>使用过程</h4><p><img src="/images/hibernate01.jpg"><br><br><br><img src="/images/hibernate02.jpg"><br><br><br><img src="/images/hibernate03.jpg"><br><br><br><img src="/images/hibernate04.jpg"><br><br><br><img src="/images/hibernate05.jpg"><br><br></p>
+<h4 id="测试添加"><a href="#测试添加" class="headerlink" title="测试添加"></a>测试添加</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">package <span class="built_in">test</span>;</span><br><span class="line"></span><br><span class="line">import myhabernate.domain.AdminsEntity;</span><br><span class="line">import org.hibernate.Session;</span><br><span class="line">import org.hibernate.SessionFactory;</span><br><span class="line">import org.hibernate.Transaction;</span><br><span class="line">import org.hibernate.cfg.Configuration;</span><br><span class="line">import org.junit.Before;</span><br><span class="line">import org.junit.Test;</span><br><span class="line"></span><br><span class="line">public class TestMain &#123;</span><br><span class="line"></span><br><span class="line">    Configuration config = null;</span><br><span class="line">    SessionFactory sessionFactory = null;</span><br><span class="line">    Session session = null;</span><br><span class="line">    Transaction tx = null;</span><br><span class="line"></span><br><span class="line">    @Before</span><br><span class="line">    public void <span class="function"><span class="title">init</span></span>() &#123;</span><br><span class="line">        config = new Configuration().configure(<span class="string">"/hibernate.cfg.xml"</span>);</span><br><span class="line">        sessionFactory = config.buildSessionFactory();</span><br><span class="line">        session = sessionFactory.openSession();</span><br><span class="line">        tx = session.beginTransaction();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Test</span><br><span class="line">    public void <span class="function"><span class="title">testhabernate</span></span>()&#123;</span><br><span class="line">        AdminsEntity adminsEntity = new AdminsEntity(1,<span class="string">"猪猪"</span>,<span class="string">"123456"</span>);</span><br><span class="line">        session.save(adminsEntity);</span><br><span class="line">        tx.commit();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>简单的Hibernate就这样完成了</p>
 
       
 
@@ -271,7 +265,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/08/01/数据库中常用的函数/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/07/30/Hibernate/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -285,9 +279,18 @@
   
 <nav id="article-nav">
   
+    <a href="/2018/07/30/Socket/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          网络编程
+        
+      </div>
+    </a>
   
-    <a href="/2018/07/30/数据库查询优化/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">网络编程</div>
+  
+    <a href="/2018/05/15/处理高并发/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">如何处理高并发</div>
       <i class="icon-circle-right"></i>
     </a>
   
