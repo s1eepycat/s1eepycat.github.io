@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="猪猪猪头1.50">
 <meta property="og:description" content="数学函数主要用于处理数字，包括整型、浮点数等">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-01T00:28:00.926Z">
+<meta property="og:updated_time" content="2018-08-01T00:36:24.390Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据库中常用的函数">
 <meta name="twitter:description" content="数学函数主要用于处理数字，包括整型、浮点数等">
@@ -175,7 +175,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>数学函数主要用于处理数字，包括整型、浮点数等<br><br><br><a id="more"></a></p>
-<h4 id="ABS-x-abs-x-返回x的绝对值"><a href="#ABS-x-abs-x-返回x的绝对值" class="headerlink" title="ABS(x)    abs(x) 返回x的绝对值"></a>ABS(x)    abs(x) 返回x的绝对值</h4><p>SELECT ABS(-1) – 返回1</p>
+<h3 id="数值型函数"><a href="#数值型函数" class="headerlink" title="数值型函数"></a>数值型函数</h3><h4 id="ABS-x-abs-x-返回x的绝对值"><a href="#ABS-x-abs-x-返回x的绝对值" class="headerlink" title="ABS(x)    abs(x) 返回x的绝对值"></a>ABS(x)    abs(x) 返回x的绝对值</h4><p>SELECT ABS(-1) – 返回1</p>
 <h4 id="CEIL-x-CEILING-x-cell-x-celling-x-返回大于或等于x的最小整数"><a href="#CEIL-x-CEILING-x-cell-x-celling-x-返回大于或等于x的最小整数" class="headerlink" title="CEIL(x),CEILING(x)    cell(x),celling(x) 返回大于或等于x的最小整数"></a>CEIL(x),CEILING(x)    cell(x),celling(x) 返回大于或等于x的最小整数</h4><p>SELECT CEIL(1.5) – 返回2</p>
 <h4 id="FLOOR-x-floor-x-返回小于或等于x的最大整数"><a href="#FLOOR-x-floor-x-返回小于或等于x的最大整数" class="headerlink" title="FLOOR(x)    floor(x)  返回小于或等于x的最大整数"></a>FLOOR(x)    floor(x)  返回小于或等于x的最大整数</h4><p>SELECT FLOOR(1.5) – 返回1</p>
 <h4 id="RAND-rand-返回0-gt-1的随机数-以当前时间为种子"><a href="#RAND-rand-返回0-gt-1的随机数-以当前时间为种子" class="headerlink" title="RAND()    rand() 返回0-&gt;1的随机数(以当前时间为种子)"></a>RAND()    rand() 返回0-&gt;1的随机数(以当前时间为种子)</h4><p>SELECT RAND() –0.93099315644334<br>RAND(x)    ——以x为种子</p>
@@ -187,6 +187,11 @@
 <p>65        97         32         51902</p>
 <h4 id="INITCAP-c1-返回字符串并将字符串的第一个字母变为大写，其它字母小写"><a href="#INITCAP-c1-返回字符串并将字符串的第一个字母变为大写，其它字母小写" class="headerlink" title="INITCAP(c1) 返回字符串并将字符串的第一个字母变为大写，其它字母小写"></a>INITCAP(c1) 返回字符串并将字符串的第一个字母变为大写，其它字母小写</h4><p>select initcap(‘smith abc aBC’) upp from dual;</p>
 <h2 id="UPP"><a href="#UPP" class="headerlink" title="UPP"></a>UPP</h2><p>Smith Abc Abc</p>
+<h4 id="sysdate-返回当前日期"><a href="#sysdate-返回当前日期" class="headerlink" title="sysdate 返回当前日期"></a>sysdate 返回当前日期</h4><p>select sysdate  hz from dual;<br>返回：2008-11-5</p>
+<h3 id="聚组函数"><a href="#聚组函数" class="headerlink" title="聚组函数"></a>聚组函数</h3><h4 id="AVG-distinct-all-x-统计数据表选中行x列的平均值"><a href="#AVG-distinct-all-x-统计数据表选中行x列的平均值" class="headerlink" title="AVG([distinct|all]x) 统计数据表选中行x列的平均值"></a>AVG([distinct|all]x) 统计数据表选中行x列的平均值</h4><p>select avg(distinct sal),avg(all sal),avg(sal) from table3;<br>结果：  3333.33  2592.59  2592.59</p>
+<h4 id="SUM-distinct-all-x-统计数据表选中行x列的合计值"><a href="#SUM-distinct-all-x-统计数据表选中行x列的合计值" class="headerlink" title="SUM([distinct|all]x) 统计数据表选中行x列的合计值"></a>SUM([distinct|all]x) 统计数据表选中行x列的合计值</h4><p>select SUM(distinct sal),SUM(all sal),SUM(sal) from table3;<br>结果：  6666.66     7777.77     7777.77</p>
+<h4 id="MAX-distinct-all-x-最大值-MAX-distinct-all-x-最小值"><a href="#MAX-distinct-all-x-最大值-MAX-distinct-all-x-最小值" class="headerlink" title="MAX([distinct|all]x) 最大值 MAX([distinct|all]x) 最小值"></a>MAX([distinct|all]x) 最大值 MAX([distinct|all]x) 最小值</h4><p>select MAX(distinct sal),MAX(xm) from table3;<br>结果：5555.55   zhu</p>
+<h3 id="其它函数"><a href="#其它函数" class="headerlink" title="其它函数"></a>其它函数</h3><h4 id="NVL-为空值赋值"><a href="#NVL-为空值赋值" class="headerlink" title="NVL() 为空值赋值"></a>NVL() 为空值赋值</h4><p>#### </p>
 
       
 
